@@ -1,0 +1,25 @@
+spring:
+  kafka:
+    ssl:
+      trust-store-location: classpath:cert/keystore_reg.pfx
+      trust-store-type: "PKCS12"
+      trust-store-password: password
+      key-store-location: classpath:cert/keystore_reg.pfx
+      key-store-type: "PKCS12"
+      key-store-password: password
+    consumer:
+      bootstrap-servers: 80.85.250.67:9091
+      group-id: mai-devops
+      auto-offset-reset: earliest
+      enable-auto-commit: true
+    producer:
+      bootstrap-servers: 80.85.250.67:9091
+
+kafka-config:
+  topic:  PUBLISH
+  security:
+    protocol: SASL_SSL
+  sasl:
+    mechanism: PLAIN
+    jaas:
+      config: org.apache.kafka.common.security.plain.PlainLoginModule required username="adminkafka" password="39QCgYrPLU";
