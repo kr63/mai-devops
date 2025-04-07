@@ -1,0 +1,21 @@
+akhq:
+  topic-data:
+    poll-timeout: 2810000
+  clients-defaults:
+    consumer:
+      properties:
+        default.api.timeout.ms: 15000000
+  connections:
+    my-cluster-sasl:
+      properties:
+        bootstrap.servers: 80.85.250.67:9091
+        security.protocol: SASL_SSL
+        sasl.mechanism: PLAIN
+        sasl.jaas.config: org.apache.kafka.common.security.plain.PlainLoginModule required username="adminkafka" password="39QCgYrPLU";
+        ssl.truststore.location: keystore_reg.pfx
+        ssl.truststore.password: password
+        ssl.keystore.location: keystore_reg.pfx
+        ssl.keystore.password: password
+  ui-options:
+    topic-data:
+      sort: NEWEST

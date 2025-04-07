@@ -121,9 +121,6 @@ fabric.properties
 
 .idea/codeStyles/
 
-# docker volume
-docker/
-
 # git bundle files
 *.bundle
 
