@@ -9,6 +9,7 @@
     <modules>
         <module>lab01-kafka</module>
         <module>lab02-artemis</module>
+        <module>lab05-web</module>
     </modules>
     <packaging>pom</packaging>
     <name>examples</name>
